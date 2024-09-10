@@ -1,1 +1,1 @@
-# alan0893.github.io
+# Personal Website for CS 506
