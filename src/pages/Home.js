@@ -22,7 +22,6 @@ const Home = () => {
   // State variable to store scroll percentages for each section
   const [scrollPercentages, setScrollPercentages] = useState({
     about: 0,
-    experience: 0,
     skills: 0,
   }); 
 

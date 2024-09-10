@@ -60,10 +60,11 @@ const Background = ({ children }) => {
 	useEffect(() => {
 		// If route exists then use default padding style
 		if (
-			location.pathname === '/projects' || 
-			location.pathname === '/courses'|| 
 			location.pathname === '/' || 
-			location.pathname === '/work-experience'
+			location.pathname === '/work-experience' ||
+			location.pathname === '/projects' || 
+			location.pathname === '/contact' ||
+			location.pathname === '/courses'
 		)
 			setChildState(ChildWrapper);
 		else // Route doesnt exist, remove padding style

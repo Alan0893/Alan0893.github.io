@@ -67,7 +67,7 @@ const Header = () => {
             <li>
               <a className={`${NavItem} ${
                   activeNav === 'about' ? 'active' : ''
-                }`} href="#about"
+                }`} href="/"
               >
                 <span className={`${activeNav === 'about' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'about' ? ActiveSpanText : NavSpanText}`}> About</span>
@@ -101,16 +101,6 @@ const Header = () => {
               >
                 <span className={`${activeNav === 'contact' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'contact' ? ActiveSpanText : NavSpanText}`}> Contact</span>
-              </a>
-            </li>
-
-            <li>
-              <a className={`${NavItem} ${
-                  activeNav === 'skills' ? 'active' : ''
-                }`} href="#skills"
-              >
-                <span className={`${activeNav === 'skills' ? ActiveSpan : NavSpan}`} />
-                <span className={`${activeNav === 'skills' ? ActiveSpanText : NavSpanText}`}> Skills</span>
               </a>
             </li>
           </ul>
