@@ -11,8 +11,9 @@ import {
   LeftArrowSvg
 } from '../styles/styles';
 
-import Projects24 from '../components/projects/2024';
-const Projects = () => {
+import Experiences from '../components/experiences/experience';
+
+const Experience = () => {
   return (
     <>
       <main id='content' className={Container}>
@@ -27,11 +28,11 @@ const Projects = () => {
           </span>
         </Link>
 
-        <section id='2024' className={Section}>
+        <section id='work' className={Section}>
           <div className={SectionHeading}>
-            <h2 className={SectionH2}>2024</h2>
+            <h2 className={SectionH2}>Work Experiences</h2>
           </div>
-          <Projects24 />
+          <Experiences />
         </section>
 
       </main>
@@ -39,4 +40,4 @@ const Projects = () => {
   )
 }
 
-export default Projects;
+export default Experience;

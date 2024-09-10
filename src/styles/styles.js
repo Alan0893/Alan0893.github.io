@@ -338,9 +338,6 @@ export const Image = `
 	lg:mt-0
 	mb-3
 `;
-export const ProjectsContainer = `
-	group/list
-`;
 
 export const ProjContainer  = `
 	grid
