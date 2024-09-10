@@ -12,7 +12,6 @@ import {
 	ProjContainer,
 	ProjWrapper,
 	ProjDiv,
-	Links,
 	Time
 } from '../../styles/styles';
 

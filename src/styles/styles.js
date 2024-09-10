@@ -93,7 +93,6 @@ export const HeaderP = `
 	leading-normal
 `;
 export const Nav = `
-	hidden
 	lg:block
 `;
 export const NavItems = `
@@ -150,7 +149,6 @@ export const ActiveSpanText = `
 	text-slate-200 
 `;
 export const Section = `
-	mb-16
 	md:mb-24
 	lg:mb-20
 `;
@@ -158,7 +156,6 @@ export const SectionHeading = `
 	sticky
 	top-0
 	z-20
-	-mx-6
 	mb-4
 	px-6 py-5
 	backdrop-blur

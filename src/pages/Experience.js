@@ -11,15 +11,12 @@ import {
   LeftArrowSvg
 } from '../styles/styles';
 
-import Freshman from '../components/courses/Freshman';
-import Sophomore from '../components/courses/Sophomore';
-import Junior from '../components/courses/Junior';
-
-const Courses = () => {
+import Projects24 from '../components/projects/2024';
+const Projects = () => {
   return (
     <>
       <main id='content' className={Container}>
-        <Link className={LinkWrapper} to={{ pathname: '/', hash: 'courses' }}>
+        <Link className={LinkWrapper} to={{ pathname: '/', hash: 'work-experience' }}>
           <span>
             <span className='whitespace-nowrap'>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className={LeftArrowSvg}>
@@ -30,25 +27,11 @@ const Courses = () => {
           </span>
         </Link>
 
-        <section id='Junior' className={Section}>
+        <section id='2024' className={Section}>
           <div className={SectionHeading}>
-            <h2 className={SectionH2}>Junior</h2>
+            <h2 className={SectionH2}>2024</h2>
           </div>
-          <Junior />
-        </section>
-
-        <section id='Sophomore' className={Section}>
-          <div className={SectionHeading}>
-            <h2 className={SectionH2}>Sophomore</h2>
-          </div>
-          <Sophomore />
-        </section>
-
-        <section id='Freshman' className={Section}>
-          <div className={SectionHeading}>
-            <h2 className={SectionH2}>Freshman</h2>
-          </div>
-          <Freshman />
+          <Projects24 />
         </section>
 
       </main>
@@ -56,4 +39,4 @@ const Courses = () => {
   )
 }
 
-export default Courses;
+export default Projects;

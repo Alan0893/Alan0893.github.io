@@ -11,52 +11,33 @@ import {
 
 import Header from '../components/Header';
 import About from '../components/sections/About';
-import Experience from '../components/sections/Experience';
-import Projects from '../components/sections/Projects';
 import Skills from '../components/sections/Skills';
-import Certifications from '../components/sections/Certifications';
 
 import ScrollIndicator from '../components/ScrollIndicator';
 
 const Home = () => {
   const aboutRef = useRef(null);
-  const experienceRef = useRef(null);
-  const projectsRef = useRef(null);
   const skillsRef = useRef(null);
-  const certRef = useRef(null);
 
   // State variable to store scroll percentages for each section
   const [scrollPercentages, setScrollPercentages] = useState({
     about: 0,
     experience: 0,
-    projects: 0,
     skills: 0,
-    cert: 0,
   }); 
 
   useEffect(() => {
-    // If the hash is present and set to 'projects', scroll to the 'projects' section
-    if (window.location.hash === '#projects' && projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
       // Calculate scroll percentage for each section based on its height
       const aboutScrollPercentage = ((scrollTop - aboutRef.current.offsetTop) / (aboutRef.current.offsetHeight)) * 100;
-      const experienceScrollPercentage = ((scrollTop - experienceRef.current.offsetTop) / (experienceRef.current.offsetHeight)) * 100;
-      const projectsScrollPercentage = ((scrollTop - projectsRef.current.offsetTop) / (projectsRef.current.offsetHeight)) * 100;
       const skillsScrollPercentage = ((scrollTop - skillsRef.current.offsetTop) / (skillsRef.current.offsetHeight)) * 100;
-      const certScrollPercentage = ((scrollTop - certRef.current.offsetTop) / (certRef.current.offsetHeight)) * 100;
 
       // Update scroll percentages in state
       setScrollPercentages({
         about: aboutScrollPercentage,
-        experience: experienceScrollPercentage,
-        projects: projectsScrollPercentage,
         skills: skillsScrollPercentage,
-        cert: certScrollPercentage,
       });
     };
 
@@ -79,22 +60,6 @@ const Home = () => {
           </div>
           <About/>
         </section>
-
-        <section id='experience' className={Section} ref={experienceRef}>
-          <div className={SectionHeading}>
-            <h2 className={SectionH2}>Experience</h2>
-            <ScrollIndicator scrollPercentages={scrollPercentages.experience.toFixed(2)} />
-          </div>
-          <Experience />
-        </section>
-
-        <section id='projects' className={Section} ref={projectsRef}>
-          <div className={SectionHeading}>
-            <h2 className={SectionH2}>Projects</h2>
-            <ScrollIndicator scrollPercentages={scrollPercentages.projects.toFixed(2)} />
-          </div>
-          <Projects />
-        </section>
         
         <section id='skills' className={Section} ref={skillsRef}>
           <div className={SectionHeading}>
@@ -102,14 +67,6 @@ const Home = () => {
             <ScrollIndicator scrollPercentages={scrollPercentages.skills.toFixed(2)} />
           </div>
           <Skills />
-        </section>
-
-        <section id='certifications' className={Section} ref={certRef}>
-          <div className={SectionHeading}>
-            <h2 className={SectionH2}>Certifications</h2>
-            <ScrollIndicator scrollPercentages={scrollPercentages.cert.toFixed(2)} />
-          </div>
-          <Certifications />
         </section>
 
         <section className={Section}>
@@ -132,7 +89,7 @@ const Home = () => {
                   </svg>
                 </span>
               </span>
-              2023
+              2024
             </p>
           </footer>
         </section>

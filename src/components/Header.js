@@ -77,7 +77,7 @@ const Header = () => {
             <li>
               <a className={`${NavItem} ${
                   activeNav === 'experience' ? 'active' : ''
-                }`} href='#experience'
+                }`} href='/work-experience'
               >
                 <span className={`${activeNav === 'experience' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'experience' ? ActiveSpanText : NavSpanText}`}> Experience</span>
@@ -87,10 +87,20 @@ const Header = () => {
             <li>
               <a className={`${NavItem} ${
                   activeNav === 'projects' ? 'active' : ''
-                }`} href="#projects"
+                }`} href="/projects"
               >
                 <span className={`${activeNav === 'projects' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'projects' ? ActiveSpanText : NavSpanText}`}> Projects</span>
+              </a>
+            </li>
+
+            <li>
+              <a className={`${NavItem} ${
+                  activeNav === 'contact' ? 'active' : ''
+                }`} href="/contact"
+              >
+                <span className={`${activeNav === 'contact' ? ActiveSpan : NavSpan}`} />
+                <span className={`${activeNav === 'contact' ? ActiveSpanText : NavSpanText}`}> Contact</span>
               </a>
             </li>
 

@@ -6,8 +6,6 @@ import {
 	H3Span,
 	LinkSvg,
 	InfoP,
-	ChipWrapper,
-	Chip,
 	ProjContainer,
 	ProjWrapper,
 	ProjDiv,
