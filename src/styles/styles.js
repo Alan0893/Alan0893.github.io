@@ -256,12 +256,6 @@ export const InfoP = `
     text-sm 
     leading-normal
 `;
-export const Links2 = `
-	group/link 
-    inline-flex 
-    hover:text-sky-300 
-    focus-visible:text-sky-300
-`;
 export const ChipWrapper = `
 	mt-2
     flex

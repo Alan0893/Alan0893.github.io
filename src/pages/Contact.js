@@ -12,17 +12,12 @@ import ScrollIndicator from '../components/ScrollIndicator';
 
 const Contact = () => {
   const contactRef = useRef(null);
-
-  // State variable to store scroll percentage for the contact section
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-
-      // Calculate scroll percentage for the contact section
       const contactScrollPercentage = ((scrollTop - contactRef.current.offsetTop) / contactRef.current.offsetHeight) * 100;
-
       setScrollPercentage(Math.min(100, Math.max(0, contactScrollPercentage)));
     };
 
@@ -50,7 +45,6 @@ const Contact = () => {
       return;
     }
 
-    // Submit form to Formspree
     form.submit();
   };
 
@@ -65,7 +59,7 @@ const Contact = () => {
           </div>
           <div className="px-6 py-12">
             <form
-              action="https://formspree.io/f/xrbzvzdb" // Replace with your Formspree form ID
+              action="https://formspree.io/f/xrbzvzdb" 
               method="POST"
               onSubmit={handleSubmit}
               className="flex flex-col gap-6"
@@ -83,7 +77,7 @@ const Contact = () => {
               <label className="block">
                 <span className="text-slate-200">Your Email</span>
                 <input
-                  type="email" // HTML5 input type to handle basic validation
+                  type="email"
                   name="email"
                   className="mt-1 block w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                   placeholder="Enter your email"

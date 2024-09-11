@@ -19,7 +19,6 @@ const Home = () => {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
 
-  // State variable to store scroll percentages for each section
   const [scrollPercentages, setScrollPercentages] = useState({
     about: 0,
     skills: 0,
@@ -29,11 +28,9 @@ const Home = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
-      // Calculate scroll percentage for each section based on its height
       const aboutScrollPercentage = ((scrollTop - aboutRef.current.offsetTop) / (aboutRef.current.offsetHeight)) * 100;
       const skillsScrollPercentage = ((scrollTop - skillsRef.current.offsetTop) / (skillsRef.current.offsetHeight)) * 100;
 
-      // Update scroll percentages in state
       setScrollPercentages({
         about: aboutScrollPercentage,
         skills: skillsScrollPercentage,
