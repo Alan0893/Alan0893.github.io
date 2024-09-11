@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import {
   HeaderContainer,
   HeaderH1,
@@ -20,30 +21,23 @@ const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    // Select all the sections on the page and convert them into an array
     const sections = Array.from(document.querySelectorAll('section'));
 
-    // Create an IntersectionObserver instance
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Check if a section is currently intersecting the viewport
           if (entry.isIntersecting) {
-            // Set the active navigation item based on the id of the intersecting section
             setActiveNav(entry.target.id);
           }
         });
       },
-      // Set the root margin to control when a section is considered to be intersecting the viewport
       { rootMargin: '-50% 0% -50% 0%' }
     );
 
-    // Observe each section using the IntersectionObserver instance
     sections.forEach((section) => {
       observer.observe(section);
     });
 
-    // Clean up the observer when the component unmounts or when the effect is re-run
     return () => {
       observer.disconnect();
     };
@@ -65,51 +59,39 @@ const Header = () => {
         <nav className={Nav}>
           <ul className={NavItems}>
             <li>
-              <a className={`${NavItem} ${
-                  activeNav === 'about' ? 'active' : ''
-                }`} href="/"
-              >
+              <Link className={`${NavItem} ${activeNav === 'about' ? 'active' : ''}`} to="/">
                 <span className={`${activeNav === 'about' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'about' ? ActiveSpanText : NavSpanText}`}> About</span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className={`${NavItem} ${
-                  activeNav === 'experience' ? 'active' : ''
-                }`} href='/work-experience'
-              >
+              <Link className={`${NavItem} ${activeNav === 'experience' ? 'active' : ''}`} to='/work-experience'>
                 <span className={`${activeNav === 'experience' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'experience' ? ActiveSpanText : NavSpanText}`}> Experience</span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className={`${NavItem} ${
-                  activeNav === 'projects' ? 'active' : ''
-                }`} href="/projects"
-              >
+              <Link className={`${NavItem} ${activeNav === 'projects' ? 'active' : ''}`} to="/projects">
                 <span className={`${activeNav === 'projects' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'projects' ? ActiveSpanText : NavSpanText}`}> Projects</span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className={`${NavItem} ${
-                  activeNav === 'contact' ? 'active' : ''
-                }`} href="/contact"
-              >
+              <Link className={`${NavItem} ${activeNav === 'contact' ? 'active' : ''}`} to="/contact">
                 <span className={`${activeNav === 'contact' ? ActiveSpan : NavSpan}`} />
                 <span className={`${activeNav === 'contact' ? ActiveSpanText : NavSpanText}`}> Contact</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
       </div>
-      
+
       <ul className={MediaItems}>
         <li className={Media}>
-          <a  href='https://github.com/Alan0893' target='_blank' rel='noreferrer'>
+          <a href='https://github.com/Alan0893' target='_blank' rel='noreferrer'>
             <span className='sr-only'>Github</span>
             <svg 
               xmlns='http://www.w3.org/2000/svg'
@@ -151,7 +133,7 @@ const Header = () => {
         </li>
       </ul>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

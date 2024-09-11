@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Home from "./pages/Home.js"; // About Me
@@ -7,12 +7,13 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
 import Courses from './pages/Courses';
+
 import Background from './components/Background';
 import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Background>
         <Routes>
           <Route exact path='/' element={<Home />} />
@@ -23,7 +24,7 @@ function App() {
           <Route path='*'  element={<NotFound />} />
         </Routes>
       </Background>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

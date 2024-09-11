@@ -19,7 +19,7 @@ const Courses = () => {
   return (
     <>
       <main id='content' className={Container}>
-        <Link className={LinkWrapper} to={{ pathname: '/', hash: 'courses' }}>
+        <Link className={LinkWrapper} to={{ pathname: '/'}}>
           <span>
             <span className='whitespace-nowrap'>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className={LeftArrowSvg}>
