@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import {
-  Projects as Container,
+  PageContainer as Container,
   Section,
   SectionHeading,
   SectionH2,

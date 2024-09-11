@@ -5,6 +5,11 @@ import {
   SectionH2,
   Links,
   Footer,
+  FormMain,
+  FormWrapper,
+  FormStyle,
+  FormInput,
+  FormButton
 } from '../styles/styles';
 
 import Header from '../components/Header';
@@ -51,25 +56,26 @@ const Contact = () => {
   return (
     <>
       <Header />
-      <main className="pt-10 lg:w-1/2 mx-auto">
+      <main className={FormMain}>
         <section id='contact' className={Section} ref={contactRef}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>Contact</h2>
             <ScrollIndicator scrollPercentages={scrollPercentage.toFixed(2)} />
           </div>
-          <div className="px-6 py-12">
+
+          <div className={FormWrapper}>
             <form
               action="https://formspree.io/f/xrbzvzdb" 
               method="POST"
               onSubmit={handleSubmit}
-              className="flex flex-col gap-6"
+              className={FormStyle}
             >
               <label className="block">
                 <span className="text-slate-200">Your Name</span>
                 <input
                   type="text"
                   name="name"
-                  className="mt-1 block w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className={FormInput}
                   placeholder="Enter your name"
                   required
                 />
@@ -79,7 +85,7 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
-                  className="mt-1 block w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className={FormInput}
                   placeholder="Enter your email"
                   required
                 />
@@ -89,7 +95,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   rows="4"
-                  className="mt-1 block w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className={FormInput}
                   placeholder="Enter your message"
                   required
                 ></textarea>
@@ -98,7 +104,7 @@ const Contact = () => {
               <input type="text" name="_gotcha" style={{ display: 'none' }} />
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 mt-4 rounded-xl"
+                className={FormButton}
               >
                 Send Message
               </button>

@@ -2,7 +2,7 @@ export const Home = `
 	pt-10
 	lg:w-1/2
 `;
-export const Projects = `
+export const PageContainer = `
 	pt-10
 `;
 export const BackgroundContainer = `
@@ -410,4 +410,47 @@ export const ScrollWrapper = `
 export const Scroll = `
 	h-full 
 	bg-blue-400
-`
+`;
+
+export const FormMain = `
+	pt-10 
+	lg:w-1/2 
+	mx-auto
+`;
+export const FormWrapper = `
+	px-6 py-12
+`;
+export const FormStyle = `
+	flex 
+	flex-col 
+	gap-6
+`;
+export const FormLabel = `
+	block
+`;
+export const FormInput = `
+	mt-1 
+	block 
+	w-full 
+	px-3 
+	py-2 
+	bg-slate-800 
+	border 
+	border-slate-700 
+	rounded-md 
+	shadow-sm 
+	focus:outline-none 
+	focus:border-blue-500 
+	focus:ring-blue-500 
+	sm:text-sm
+`;
+export const FormButton = `
+	bg-blue-500 
+	hover:bg-blue-700 
+	text-white 
+	font-semibold 
+	py-2 
+	px-4 
+	mt-4 
+	rounded-xl
+`;
