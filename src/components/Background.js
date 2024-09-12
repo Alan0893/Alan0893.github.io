@@ -51,7 +51,8 @@ const Background = ({ children }) => {
 			location.pathname === '/work-experience' ||
 			location.pathname === '/projects' || 
 			location.pathname === '/contact' ||
-			location.pathname === '/courses'
+			location.pathname === '/assignments' ||
+			location.pathname === '/courses' 
 		)
 			setChildState(ChildWrapper);
 		else // Route doesnt exist, remove padding style

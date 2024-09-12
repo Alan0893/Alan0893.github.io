@@ -5,6 +5,7 @@ import Home from "./pages/Home.js";
 import Experience from './pages/Experience.js';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Assignments from './pages/Assignments';
 
 import Courses from './pages/Courses';
 
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/work-experience' element={<Experience />} />
           <Route exact path='/projects' element={<Projects />} />
           <Route exact path='/contact' element={<Contact />} />
+          <Route exact path='/assignments' element={<Assignments />} />
           <Route exact path='/courses' element={<Courses />} />
           <Route path='*'  element={<NotFound />} />
         </Routes>

@@ -454,3 +454,13 @@ export const FormButton = `
 	mt-4 
 	rounded-xl
 `;
+export const AssignmentCard = `
+	border 
+	border-slate-700 
+	p-6 
+	rounded-lg 
+	shadow-lg 
+	bg-slate-800 
+	hover:bg-slate-700 
+	transition-colors
+`;
