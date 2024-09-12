@@ -12,7 +12,7 @@ import {
   LinkText,
   LeftArrowSvg,
   RightArrowSvg,
-	AssignmentCard
+  AssignmentCard
 } from '../styles/styles';
 
 const assignments = [
@@ -21,6 +21,7 @@ const assignments = [
     description: 'Wrote a python script that adds two numbers and prints their sum to the command line.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-0'
   }
+  // Add more assignments here
 ];
 
 const Assignments = () => {
@@ -49,12 +50,12 @@ const Assignments = () => {
               <div key={index} className={AssignmentCard}>
                 <h3 className={SectionH3}>{assignment.title}</h3>
                 <p className={InfoP}>{assignment.description}</p>
-                <Link to={{ pathname: assignment.repoLink }} target='_blank' rel='noopener noreferrer' className={LinkWrapper}>
+                <a href={assignment.repoLink} target='_blank' rel='noopener noreferrer' className={LinkWrapper}>
                   <span className={LinkText}>Github Link</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={RightArrowSvg}>
                     <path fillRule="evenodd" d="M12 10H3m9-4l4 4m0 0l-4 4m4-4H9" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
