@@ -56,7 +56,7 @@ const Assignments = () => {
                 <h3 className={SectionH3}>{assignment.title}</h3>
                 <p className={InfoP}>{assignment.description}</p>
                 <Link to={{ pathname: assignment.repoLink }} target='_blank' rel='noopener noreferrer' className={LinkWrapper}>
-                  <span className={LinkText}>View on GitHub</span>
+                  <span className={LinkText}>Github Link</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={RightArrowSvg}>
                     <path fillRule="evenodd" d="M12 10H3m9-4l4 4m0 0l-4 4m4-4H9" clipRule="evenodd" />
                   </svg>
