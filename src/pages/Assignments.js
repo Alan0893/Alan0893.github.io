@@ -17,16 +17,10 @@ import {
 
 const assignments = [
   {
-    title: 'Assignment 1: CPU Clock Frequency Measurement',
-    description: 'I measured CPU clock frequency using `rdtsc` and compared sleep vs busy-waiting methods.',
-    repoLink: 'https://github.com/alan0893/cpu-frequency-measurement'
-  },
-  {
-    title: 'Assignment 2: Web Development Portfolio',
-    description: 'Created a portfolio site using React and Tailwind, deployed via GitHub Pages.',
-    repoLink: 'https://github.com/alan0893/portfolio'
+    title: 'Assignment 0: Adding Two Numbers',
+    description: 'Wrote a python script that adds two numbers and prints their sum to the command line.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-0'
   }
-  // Add more assignments here
 ];
 
 const Assignments = () => {
