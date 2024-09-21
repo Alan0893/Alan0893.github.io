@@ -20,8 +20,12 @@ const assignments = [
     title: 'Assignment 0: Adding Two Numbers',
     description: 'Wrote a python script that adds two numbers and prints their sum to the command line.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-0'
+  },
+  {
+    title: 'Assignment 1: Elevator Data Collection',
+    description: 'calculated the average walking distance to the next elevator arrival for both the training and test data, comparing the results between the naive waiting position and the smart waiting position.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-1'
   }
-  // Add more assignments here
 ];
 
 const Assignments = () => {
