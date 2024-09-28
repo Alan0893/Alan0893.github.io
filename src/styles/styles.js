@@ -462,5 +462,22 @@ export const AssignmentCard = `
 	shadow-lg 
 	bg-slate-800 
 	hover:bg-slate-700 
+	
+	
 	transition-colors
+`;
+
+export const Video = `
+	relative 
+	pb-[56.25%] 
+	h-0 
+	overflow-hidden 
+	rounded-lg
+	mt-5
+`;
+export const Iframe = `
+	absolute 
+	top-0 left-0 
+	w-full h-full
+	rounded-lg
 `;

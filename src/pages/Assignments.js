@@ -12,7 +12,9 @@ import {
   LinkText,
   LeftArrowSvg,
   RightArrowSvg,
-  AssignmentCard
+  AssignmentCard,
+  Video,
+  Iframe
 } from '../styles/styles';
 
 const assignments = [
@@ -23,8 +25,14 @@ const assignments = [
   },
   {
     title: 'Assignment 1: Elevator Data Collection',
-    description: 'calculated the average walking distance to the next elevator arrival for both the training and test data, comparing the results between the naive waiting position and the smart waiting position.',
+    description: 'Calculated the average walking distance to the next elevator arrival for both the training and test data, comparing the results between the naive waiting position and the smart waiting position.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-1'
+  },
+  {
+    title: 'Assignment 2: KMeans Clustering Visualization Webpage',
+    description: 'Developed an interactive web application that demonstrates the KMeans clustering algorithm using various initialization methods.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-2',
+    videoLink: '/assets/videos/assignment2.mp4'
   }
 ];
 
@@ -60,6 +68,17 @@ const Assignments = () => {
                     <path fillRule="evenodd" d="M12 10H3m9-4l4 4m0 0l-4 4m4-4H9" clipRule="evenodd" />
                   </svg>
                 </a>
+                {assignment.videoLink && (
+                  <div className={Video}>
+                    <iframe
+                      className={Iframe}
+                      src={assignment.videoLink}
+                      title='Assignment 2 Video'
+                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
               </div>
             ))}
           </div>
