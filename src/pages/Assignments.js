@@ -33,6 +33,11 @@ const assignments = [
     description: 'Developed an interactive web application that demonstrates the KMeans clustering algorithm using various initialization methods.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-2',
     videoLink: '/assets/videos/assignment2.mp4'
+  },
+  {
+    title: 'Assignment 3: Singular Value Decomposition (SVD) Algorithm',
+    description: 'Implemented the SVD algorithm from scatch to perform dimensionality reduction on a dataset, explore the effect of the number of dimensions on the performance of a classifier, and visualize results for comparison and analysis.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-3'
   }
 ];
 
