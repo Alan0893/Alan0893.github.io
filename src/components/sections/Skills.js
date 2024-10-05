@@ -145,6 +145,24 @@ const Skills = () => {
                     <span className={ChipText}>NextJS</span>
                   </div>
                 </li>
+                <li className='mr-1.5 mt-1'>
+                  <div className={Chip}>
+                    <img src='https://cdn.worldvectorlogo.com/logos/c-1.svg' alt='C' className={ChipImage} />
+                    <span className={ChipText}>C</span>
+                  </div>
+                </li>
+                <li className='mr-1.5 mt-1'>
+                  <div className={Chip}>
+                    <img src='https://cdn.worldvectorlogo.com/logos/c.svg' alt='C++' className={ChipImage} />
+                    <span className={ChipText}>C++</span>
+                  </div>
+                </li>
+                <li className='mr-1.5 mt-1'>
+                  <div className={Chip}>
+                    <img src='https://cdn.worldvectorlogo.com/logos/flask.svg' alt='Flask' className={ChipImage} />
+                    <span className={ChipText}>Flask</span>
+                  </div>
+                </li>                
               </ul>
             </div>
           </div>

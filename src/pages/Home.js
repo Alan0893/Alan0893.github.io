@@ -74,7 +74,7 @@ const Home = () => {
               <a className={Links} href='https://react.dev/' target='_blank' rel='noreferrer'> ReactJS </a> and
               <a className={Links} href='https://tailwindcss.com/' target='_blank' rel='noreferrer'> Tailwind CSS </a>, 
               deployed on
-              <a className={Links} href='https://netlify.com/' target='_blank' rel='noreferrer'> Netlify </a>, and developed in
+              <a className={Links} href='https://github.com/' target='_blank' rel='noreferrer'> GitHub Pages </a>, and developed in
               <a className={Links} href='https://code.visualstudio.com/' target='_blank' rel='noreferrer'> Visual Studio Code</a>.
 
               <br/><br/>
