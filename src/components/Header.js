@@ -85,6 +85,12 @@ const Header = () => {
                 <span className={`${activeNav === 'contact' ? ActiveSpanText : NavSpanText}`}> Contact</span>
               </Link>
             </li>
+
+            <a className={`${NavItem} ${activeNav === 'resume' ? 'active' : ''}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <span className={`${activeNav === 'resume' ? ActiveSpan : NavSpan}`} />
+              <span className={`${activeNav === 'resume' ? ActiveSpanText : NavSpanText}`}> Resume</span>
+            </a>
+
           </ul>
         </nav>
       </div>
