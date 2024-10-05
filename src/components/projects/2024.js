@@ -16,7 +16,7 @@ import {
 	Time
 } from '../../styles/styles';
 
-const Projects23 = () => {	
+const Projects24 = () => {	
   	return (
 		<div>
 			<ul className={ProjContainer}>
@@ -151,4 +151,4 @@ const Projects23 = () => {
   	)
 }
 
-export default Projects23
+export default Projects24
