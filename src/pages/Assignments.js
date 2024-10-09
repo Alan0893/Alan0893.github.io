@@ -19,25 +19,27 @@ import {
 
 const assignments = [
   {
-    title: 'Assignment 0: Adding Two Numbers',
-    description: 'Wrote a python script that adds two numbers and prints their sum to the command line.',
-    repoLink: 'https://github.com/Alan0893/alanl193-assignment-0'
-  },
-  {
-    title: 'Assignment 1: Elevator Data Collection',
-    description: 'Calculated the average walking distance to the next elevator arrival for both the training and test data, comparing the results between the naive waiting position and the smart waiting position.',
-    repoLink: 'https://github.com/Alan0893/alanl193-assignment-1'
-  },
-  {
+    title: 'Assignment 4: Latent Semantic Analysis (LSA) Search Engine Webpage',
+    description: 'Created a webpage where users can type queries and retrieve documents from a predefined dataset using the Latent Semantic Analysis (LSA) algorithm.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-4',
+    videoLink: '/assets/videos/assignment4.mp4'
+  },{
+    title: 'Assignment 3: Singular Value Decomposition (SVD) Algorithm',
+    description: 'Implemented the SVD algorithm from scatch to perform dimensionality reduction on a dataset, explore the effect of the number of dimensions on the performance of a classifier, and visualize results for comparison and analysis.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-3'
+  }, {
     title: 'Assignment 2: KMeans Clustering Visualization Webpage',
     description: 'Developed an interactive web application that demonstrates the KMeans clustering algorithm using various initialization methods.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-2',
     videoLink: '/assets/videos/assignment2.mp4'
-  },
-  {
-    title: 'Assignment 3: Singular Value Decomposition (SVD) Algorithm',
-    description: 'Implemented the SVD algorithm from scatch to perform dimensionality reduction on a dataset, explore the effect of the number of dimensions on the performance of a classifier, and visualize results for comparison and analysis.',
-    repoLink: 'https://github.com/Alan0893/alanl193-assignment-3'
+  }, {
+    title: 'Assignment 1: Elevator Data Collection',
+    description: 'Calculated the average walking distance to the next elevator arrival for both the training and test data, comparing the results between the naive waiting position and the smart waiting position.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-1'
+  }, {
+    title: 'Assignment 0: Adding Two Numbers',
+    description: 'Wrote a python script that adds two numbers and prints their sum to the command line.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-0'
   }
 ];
 
