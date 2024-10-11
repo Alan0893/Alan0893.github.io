@@ -20,8 +20,63 @@ const Projects24 = () => {
 	return (
 		<div>
 			<ul className={ProjContainer}>
+				<li className={Spacing}>
+					<div className={ProjWrapper}>
+						<div className={ProjDiv} />
+						<div className={Time}>
+							October
+						</div>
+						<div className={Info}>
+							<h3>
+								<a className={H3Container} href='https://github.com/Alan0893/alanl193-assignment-4' target='_blank' rel='noreferrer'>
+									<span className={H3Span} />
+									<span>
+										Latent Semantic Analysis Search Engine
+										<span className='inline-block'>
+											<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className={LinkSvg}>
+												<path fillRule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clipRule='evenodd' />
+											</svg>
+										</span>
+									</span>
+								</a>
+							</h3>
+							<p className={InfoP}>
+								Built a search engine that uses Latent Semantic Analysis (LSA) to retrieve top 5 relevant documents from a dataset of 18,000+ documents with 95% accuracy based on cosine similarity.
+								Designed a responsive web interface, handling user queries in real time with document retrieval latency under 200ms, and visualized cosine similarity scores via bar charts.
+								Reduced dimensionality of the term-document matrix by 85% using Singular Value Decomposition (SVD), leading to a 50% improvement in query processing speed while maintaining high retrieval accuracy.
+							</p>
+							<ul className={ChipWrapper}>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Python</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Flask</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Javascript</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>HTML</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Makefile</div>
+								</li>
+							</ul>
+						</div>
+						<img 
+							alt='search' 
+							loading='lazy' 
+							width='175' 
+							height='109' 
+							decoding='async'
+							className={Image} 
+							style={{ color: 'transparent' }} 
+							src='/assets/projects/search.png'
+						/>
+					</div>
+				</li>
 
-			<li className={Spacing}>
+				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
 						<div className={Time}>
@@ -32,11 +87,6 @@ const Projects24 = () => {
 								<a className={H3Container} href='https://github.com/Alan0893/alanl193-assignment-2' target='_blank' rel='noreferrer'>
 									<span className={H3Span} />
 									<span>
-										<img
-											className='mr-2 h-5 w-5 inline'
-											src='/assets/projects/favicons/kmeans.ico'
-											alt='favicon'
-										/>
 										KMeans Clustering Visualization
 										<span className='inline-block'>
 											<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className={LinkSvg}>
