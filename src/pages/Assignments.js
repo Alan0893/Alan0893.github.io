@@ -19,6 +19,10 @@ import {
 
 const assignments = [
   {
+    title: 'Assignment 5: Predicting Customer Churn Using KNN',
+    description: 'Developed a predictive model to identify customers who are likely to churn (i.e., leave the bank) using the K-Nearest Neighbors (KNN) algorithm.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-5'
+  },{
     title: 'Assignment 4: Latent Semantic Analysis (LSA) Search Engine Webpage',
     description: 'Created a webpage where users can type queries and retrieve documents from a predefined dataset using the Latent Semantic Analysis (LSA) algorithm.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-4',
