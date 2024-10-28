@@ -19,6 +19,10 @@ import {
 
 const assignments = [
   {
+    title: 'Midterm: Predicting Star Rating',
+    description: 'Predicted the star rating associated with user reviews from Amazon Movie Reviews using the available features.',
+    repoLink: 'https://github.com/Alan0893/alanl193-midterm'
+  }, {
     title: 'Assignment 5: Predicting Customer Churn Using KNN',
     description: 'Developed a predictive model to identify customers who are likely to churn (i.e., leave the bank) using the K-Nearest Neighbors (KNN) algorithm.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-5'
