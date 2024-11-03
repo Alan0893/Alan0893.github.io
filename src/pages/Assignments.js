@@ -19,6 +19,11 @@ import {
 
 const assignments = [
   {
+    title: 'Linear Regression',
+    description: 'Created an interactive webpage to demonstrate how modifying parameters affects regression results, especially when there is no actual relationship between X and Y.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-6',
+    videoLink: '/assets/videos/assignment6.mp4'
+  }, {
     title: 'Midterm: Predicting Star Rating',
     description: 'Predicted the star rating associated with user reviews from Amazon Movie Reviews using the available features.',
     repoLink: 'https://github.com/Alan0893/alanl193-midterm'
