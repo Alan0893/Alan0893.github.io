@@ -19,12 +19,12 @@ import {
 
 const assignments = [
   {
-    title: 'Hypothesis Testing and Confidence Intervals in Linear Regression',
+    title: 'Assignment 7: Hypothesis Testing and Confidence Intervals in Linear Regression',
     description: 'Enhanced interactive webpage to allow users to perform hypothesis tests on the slope or intercept of the regression line and generate confidence intervals based on simulations.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-7',
     videoLink: '/assets/videos/assignment7.mp4'
   }, {
-    title: 'Linear Regression',
+    title: 'Assignment 6: Linear Regression',
     description: 'Created an interactive webpage to demonstrate how modifying parameters affects regression results, especially when there is no actual relationship between X and Y.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-6',
     videoLink: '/assets/videos/assignment6.mp4'
