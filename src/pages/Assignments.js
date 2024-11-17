@@ -19,6 +19,11 @@ import {
 
 const assignments = [
   {
+    title: 'Assignment 8: Logistic Regression',
+    description: 'Generated datasets with shifted clusters, fitted a logistic regression model, visualized the data and decision boundaries, and analyzed how model parameters change as cluster shift distances increase.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-8',
+    videoLink: '/assets/videos/assignment8.mp4'
+  },{
     title: 'Assignment 7: Hypothesis Testing and Confidence Intervals in Linear Regression',
     description: 'Enhanced interactive webpage to allow users to perform hypothesis tests on the slope or intercept of the regression line and generate confidence intervals based on simulations.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-7',
