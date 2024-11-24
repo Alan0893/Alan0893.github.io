@@ -19,6 +19,11 @@ import {
 
 const assignments = [
   {
+    title: 'Assignment 9: Neural Networks',
+    description: 'Implemented and analyzed a simple neural network by visualizing its learned features, decision boundaries, and gradients.',
+    repoLink: 'https://github.com/Alan0893/alanl193-assignment-9',
+    videoLink: '/assets/videos/assignment9.mp4'
+  },{
     title: 'Assignment 8: Logistic Regression',
     description: 'Generated datasets with shifted clusters, fitted a logistic regression model, visualized the data and decision boundaries, and analyzed how model parameters change as cluster shift distances increase.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-8',
