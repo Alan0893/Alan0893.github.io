@@ -19,6 +19,10 @@ import {
 
 const assignments = [
   {
+    title: 'Extra Credit: Identifying Credit Card Fraud',
+    description: 'Predicted whether a transaction is fraudulent.',
+    repoLink: 'https://github.com/Alan0893/CS506-EC'
+  }, {
     title: 'Assignment 9: Neural Networks',
     description: 'Implemented and analyzed a simple neural network by visualizing its learned features, decision boundaries, and gradients.',
     repoLink: 'https://github.com/Alan0893/alanl193-assignment-9',
