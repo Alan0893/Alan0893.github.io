@@ -19,6 +19,48 @@ const Freshman = () => {
 		<div>
 			<ul className={ProjContainer}>
 
+			<li className={Spacing}>
+					<div className={ProjWrapper}>
+						<div className={ProjDiv} />
+						<div className={Time}>
+							Jan 2024 - May 2024
+						</div>
+						<div className={Info}>
+							<h3>
+								<a className={H3Container} href='https://github.com/Alan0893/Boston-Budget-Analysis' target='_blank' rel='noreferrer'>
+									<span className={H3Span} />
+									<span>
+										City of Boston : Data Analyst
+										<span className='inline-block'>
+											<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className={LinkSvg}>
+												<path fillRule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clipRule='evenodd' />
+											</svg>
+										</span>
+									</span>
+								</a>
+							</h3>
+							<p className={InfoP}>
+								Analyzed and modeled City of Boston’s operating and capital budget data, examining over 10 years of budget data
+								across 50+ departments, identifying spending trends and discrepancies. Developed and deployed linear regression models
+								and clustering algorithms that improved the accuracy of budget allocation insights by 20%. Created 10+ interactive visualizations, 
+								including bar charts, choropleth maps, and scatter plots, providing actionable insights that influenced strategic decisions on per 
+								capita spending in critical areas such as education and housing.
+							</p>
+							<ul className={ChipWrapper}>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Data Analysis</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Linear Regression</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Flask</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -27,7 +69,7 @@ const Freshman = () => {
 						</div>
 						<div className={Info}>
 							<h3>
-								<a className={H3Container} href='https://www.bu.edu/academics/cas/courses/cas-cs-411/' target='_blank' rel='noreferrer'>
+								<a className={H3Container} href='https://github.com/Alan0893/Recipe' target='_blank' rel='noreferrer'>
 									<span className={H3Span} />
 									<span>
 										Boston University - CS 411 : Full-Stack Developer
