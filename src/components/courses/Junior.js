@@ -6,6 +6,8 @@ import {
 	H3Span,
 	LinkSvg,
 	InfoP,
+	ChipWrapper,
+	Chip,
 	ProjContainer,
 	ProjWrapper,
 	ProjDiv,
@@ -40,7 +42,17 @@ const Junior = () => {
 							<p className={InfoP}>
 								Covers practical skills in working with data and introduces a wide range of techniques that are commonly used in the analysis of data, such as clustering, classification, regression, and network analysis. Emphasizes hands-on application of methods via programming.
 							</p>
-							
+							<ul className={ChipWrapper}>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Python</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Data Analysis</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Machine Learning</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</li>
@@ -68,7 +80,17 @@ const Junior = () => {
 							<p className={InfoP}>
 								Introduction to database management systems. Examines entity-relationship, relational, and object-oriented data models; commercial query languages: SQL, relational algebra, relational calculus, and QBE; file organization, indexing and hashing, query optimization, transaction processing, concurrency control and recovery,integrity, and security.
 							</p>
-							
+							<ul className={ChipWrapper}>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>SQL</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>XML</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>MongoDB</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</li>
@@ -96,7 +118,17 @@ const Junior = () => {
 							<p className={InfoP}>
 								Programming-centric introduction to computer systems. The course discusses system design principles, performance analysis, communication and synchronization primitives, concurrency control, database transactions, data consistency, task and data parallelism, replication, fault tolerance, and distributed consensus. 
 							</p>
-							
+							<ul className={ChipWrapper}>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>C</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Concurrency</div>
+								</li>
+								<li className='mr-1.5 mt-2'>
+									<div className={Chip}>Parallelism</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</li>

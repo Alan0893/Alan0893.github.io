@@ -52,7 +52,7 @@ const About = () => {
               </h3>
               <p className={InfoP}>
                 <b>Courses: </b> 
-                  Software Engineering, Web Application Development, Analysis of Algorithms,
+                  Data Science Tools & Applications, Distributed Systems, Database Systems, Software Engineering, Web Application Development, Analysis of Algorithms,
                   Functional Programming, Statistics, Computer Systems, Linear Algebra,
                   Discrete Math, Data Structures & OOP in Java
               </p>
