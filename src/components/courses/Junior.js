@@ -18,8 +18,8 @@ const Junior = () => {
   	return (
 		<div>
 			<ul className={ProjContainer}>
-
-			<li className={Spacing}>
+				
+				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
 						<div className={Time}>
