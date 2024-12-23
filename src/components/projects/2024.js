@@ -81,7 +81,7 @@ const Projects24 = () => {
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
 						<div className={Time}>
-							November
+							November 
 						</div>
 						<div className={Info}>
 							<h3>
