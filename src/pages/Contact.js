@@ -98,8 +98,9 @@ const Contact = () => {
                   className={FormInput}
                   placeholder="Enter your message"
                   required
-                ></textarea>
+                />
               </label>
+
               {/* Hidden input for bot protection */}
               <input type="text" name="_gotcha" style={{ display: 'none' }} />
               <button
@@ -118,7 +119,7 @@ const Contact = () => {
               Connect with me on 
               <a className={Links} href='https://www.linkedin.com/in/alanl193/' target='_blank' rel='noreferrer'> LinkedIn </a>
               or 
-              <a className={Links} href='https://github.com/Alan0893' target='_blank' rel='noreferrer'> GitHub </a>.
+              <a className={Links} href='https://github.com/Alan0893' target='_blank' rel='noreferrer'> GitHub </a>
 
               <br /><br />
               <span>
