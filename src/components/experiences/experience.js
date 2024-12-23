@@ -23,7 +23,7 @@ const Freshman = () => {
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
 						<div className={Time}>
-							Jan 2024 - May 2024
+							Sep 2024 - Dec 2024
 						</div>
 						<div className={Info}>
 							<h3>
