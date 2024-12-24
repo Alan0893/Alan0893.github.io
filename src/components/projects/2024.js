@@ -54,9 +54,6 @@ const Projects24 = () => {
 									<div className={Chip}>Multi-threading</div>
 								</li>
 								<li className='mr-1.5 mt-2'>
-									<div className={Chip}>Synchronization</div>
-								</li>
-								<li className='mr-1.5 mt-2'>
 									<div className={Chip}>Queuing Policy</div>
 								</li>
 								<li className='mr-1.5 mt-2'>
