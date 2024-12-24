@@ -10,8 +10,24 @@ import {
   ChipText,
   ChipImage
 } from '../../styles/styles';
+import WordSphere from '../WordSphere';
 
 const Skills = () => {
+  const texts = [
+    'Java', 'HTML', 'CSS', 'Python', 'JavaScript', 'ReactJS', 'Git', 'Firebase', 'Jupyter Notebook',
+    'Bash/Shell', 'x86 Assembly', 'LaTeX', 'Tailwind CSS', 'Bootstrap', 'ViteJS', 'NodeJS', 'OCaml', 
+    'NextJS', 'C', 'C++', 'Flask', 'MongoDB', 'Kotlin', 'GoLang'
+  ];
+  const counts = [1, 2, 4, 5, 4, 2, 1];
+
+  const options = {
+    tilt: Math.PI / 9,
+    initialVelocityX: 3.5,
+    initialVelocityY: 3.5,
+    initialRotationX: Math.PI * 0.5,
+    initialRotationZ: 0,
+  };
+
   return (
 	  <div>
       <ol>
@@ -202,6 +218,9 @@ const Skills = () => {
         </li>
 
       </ol>
+      <div className="flex justify-center items-center">
+        <WordSphere texts={texts} counts={counts} options={options} />
+      </div>
     </div>
   )
 }
