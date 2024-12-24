@@ -44,6 +44,12 @@ const Skills = () => {
                 </li>
                 <li className='mr-1.5 mt-1'>
                   <div className={Chip}>
+                    <img src='https://cdn.worldvectorlogo.com/logos/python-5.svg' alt='python' className={ChipImage} />
+                    <span className={ChipText}>Python</span>
+                  </div>
+                </li>
+                <li className='mr-1.5 mt-1'>
+                  <div className={Chip}>
                     <img src='https://cdn.worldvectorlogo.com/logos/logo-javascript.svg' alt='javascript' className={ChipImage} />
                     <span className={ChipText}>JavaScript</span>
                   </div>
@@ -85,12 +91,6 @@ const Skills = () => {
             </header>
             <div className={Info}>
               <ul className={ChipWrapper}>
-              <li className='mr-1.5 mt-1'>
-                  <div className={Chip}>
-                    <img src='https://cdn.worldvectorlogo.com/logos/python-5.svg' alt='python' className={ChipImage} />
-                    <span className={ChipText}>Python</span>
-                  </div>
-                </li>
                 <li className='mr-1.5 mt-1'>
                   <div className={Chip}>
                     <img src='https://www.svgrepo.com/show/353478/bash-icon.svg' alt='bash' className={ChipImage} />
@@ -162,7 +162,13 @@ const Skills = () => {
                     <img src='https://cdn.worldvectorlogo.com/logos/flask.svg' alt='Flask' className={ChipImage} />
                     <span className={ChipText}>Flask</span>
                   </div>
-                </li>                
+                </li>    
+                <li className='mr-1.5 mt-1'>
+                  <div className={Chip}>
+                    <img src='https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg' alt='mongodb' className={ChipImage} />
+                    <span className={ChipText}>MongoDB</span>
+                  </div>
+                </li>            
               </ul>
             </div>
           </div>
@@ -179,11 +185,17 @@ const Skills = () => {
                 
                 <li className='mr-1.5 mt-1'>
                   <div className={Chip}>
-                    <img src='https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg' alt='mongodb' className={ChipImage} />
-                    <span className={ChipText}>MongoDB</span>
+                    <img src='https://cdn.worldvectorlogo.com/logos/kotlin-2.svg' alt='mongodb' className={ChipImage} />
+                    <span className={ChipText}>Kotlin</span>
                   </div>
                 </li>
-
+                <li className='mr-1.5 mt-1'>
+                  <div className={Chip}>
+                    <img src='https://cdn.worldvectorlogo.com/logos/go-logo-1.svg' alt='mongodb' className={ChipImage} />
+                    <span className={ChipText}>GoLang</span>
+                  </div>
+                </li>
+                
               </ul>
             </div>
           </div>
