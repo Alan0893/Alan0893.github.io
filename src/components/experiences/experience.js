@@ -8,18 +8,18 @@ import {
 	InfoP,
 	ChipWrapper,
 	Chip,
-	ProjContainer,
 	ProjWrapper,
 	ProjDiv,
-	Time
+	Time,
+	SingleBlockContainer
 } from '../../styles/styles';
 
-const Freshman = () => {	
-  	return (
+const Experience = () => {	
+  return (
 		<div>
-			<ul className={ProjContainer}>
+			<ul className={SingleBlockContainer}> 
 
-			<li className={Spacing}>
+				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
 						<div className={Time}>
@@ -142,10 +142,10 @@ const Freshman = () => {
 						</div>
 					</div>
 				</li>
-
+				
 			</ul>
 		</div>
-  	)
+  )
 }
 
-export default Freshman;
+export default Experience;

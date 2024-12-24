@@ -342,7 +342,7 @@ export const ProjWrapper = `
 	group
 	relative
 	grid
-	pb-1
+	pb-6
 	gap-4
 	p-5
 	rounded-lg
@@ -480,4 +480,9 @@ export const Iframe = `
 	top-0 left-0 
 	w-full h-full
 	rounded-lg
+`;
+
+export const SingleBlockContainer = `
+	flex
+	flex-col
 `;
