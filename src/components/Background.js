@@ -37,7 +37,7 @@ const Background = ({ children }) => {
 			const spotlightX = ((clientX - left) / width) * 100;
 			const spotlightY = ((clientY - top) / height) * 100;
 
-			const gradientColor = `radial-gradient(500px circle at ${spotlightX}% ${spotlightY}%, rgba(29, 78, 216, 0.15), transparent 80%)`;
+			const gradientColor = `radial-gradient(600px circle at ${spotlightX}% ${spotlightY}%, rgba(29, 78, 216, 0.15), transparent 65%)`;
 
 			setMouseStyle({ background: gradientColor });
 		}
