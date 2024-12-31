@@ -7,7 +7,7 @@ import {
 	ChildWrapper,
 	ChildWrapper2,
 	BackgroundChild
-} from '../styles/styles';
+} from '../../styles/styles';
 
 const Background = ({ children }) => {
 	const [mouseStyle, setMouseStyle] = useState(null);

@@ -12,8 +12,8 @@ import {
   FormButton
 } from '../styles/styles';
 
-import Header from '../components/Header';
-import ScrollIndicator from '../components/ScrollIndicator';
+import Header from '../components/home/Header';
+import ScrollIndicator from '../components/global/ScrollIndicator';
 
 const Contact = () => {
   const contactRef = useRef(null);

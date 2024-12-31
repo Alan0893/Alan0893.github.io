@@ -10,7 +10,7 @@ import {
   ChipText,
   ChipImage
 } from '../../styles/styles';
-import WordSphere from '../WordSphere';
+import WordSphere from '../home/WordSphere';
 
 const Skills = () => {
   const texts = [

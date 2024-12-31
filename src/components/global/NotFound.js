@@ -5,7 +5,7 @@ import {
   Header404,
   Separator,
   Text404
-} from '../styles/styles';
+} from '../../styles/styles';
 
 const NotFound = () => {
   return (

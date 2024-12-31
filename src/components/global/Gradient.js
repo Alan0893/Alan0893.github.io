@@ -5,7 +5,7 @@ import {
 	GradientWrapper2,
 	GradientSvg1,
 	GradientSvg2,
-} from '../styles/styles';
+} from '../../styles/styles';
 
 const Gradient = ({ children }) => {
   	return (

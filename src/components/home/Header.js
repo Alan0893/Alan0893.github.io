@@ -14,7 +14,7 @@ import {
   Media,
   ActiveSpan,
   ActiveSpanText
-} from '../styles/styles';
+} from '../../styles/styles';
 
 const Header = () => {
   const [activeNav, setActiveNav] = useState('');

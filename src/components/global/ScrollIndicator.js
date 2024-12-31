@@ -2,7 +2,7 @@ import React from 'react';
 import {
 	ScrollWrapper,
 	Scroll
-} from '../styles/styles';
+} from '../../styles/styles';
 
 const ScrollIndicator = ({ scrollPercentages }) => {
 	return (

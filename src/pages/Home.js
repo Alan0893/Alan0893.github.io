@@ -9,11 +9,11 @@ import {
   Footer
 } from '../styles/styles';
 
-import Header from '../components/Header';
+import Header from '../components/home/Header';
 import About from '../components/sections/About';
 import Skills from '../components/sections/Skills';
 
-import ScrollIndicator from '../components/ScrollIndicator';
+import ScrollIndicator from '../components/global/ScrollIndicator';
 
 const Home = () => {
   const aboutRef = useRef(null);

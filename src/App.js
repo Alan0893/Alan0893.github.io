@@ -9,8 +9,8 @@ import Contact from './pages/Contact';
 
 import Courses from './pages/Courses';
 
-import Background from './components/Background';
-import NotFound from './components/NotFound';
+import Background from './components/global/Background';
+import NotFound from './components/global/NotFound';
 
 function App() {
   return (
