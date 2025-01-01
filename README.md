@@ -1,1 +1,1 @@
-# Personal Website for CS 506
+# Personal Website
