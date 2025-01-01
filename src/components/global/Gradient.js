@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styled components for consistent styling across app
 import {
 	GradientContainer,
 	GradientWrapper1,
@@ -8,8 +10,9 @@ import {
 } from '../../styles/styles';
 
 const Gradient = ({ children }) => {
-  	return (
+  return (
 		<div className={GradientContainer}>
+			{/* Gradient SVG 1 */}
 			<div className={GradientWrapper1}>
 				<svg className={GradientSvg1} viewBox='0 0 1155 678'>
 					<path 
@@ -33,7 +36,8 @@ const Gradient = ({ children }) => {
 			</div>
 
 			{ children }
-
+		
+			{/* Gradient SVG 2 */}
 			<div className={GradientWrapper2}>
 				<svg className={GradientSvg2} viewBox='0 0 1155 678'>
 					<path 
@@ -55,6 +59,7 @@ const Gradient = ({ children }) => {
 					</defs>
 				</svg>
 			</div>
+			
 		</div>
 	)
 }

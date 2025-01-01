@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Styled components for consistent styling across app
 import {
   PageContainer as Container,
   Section,
@@ -11,12 +12,15 @@ import {
   LeftArrowSvg
 } from '../styles/styles';
 
+// Import components
 import Experiences from '../components/experiences/experience';
 
 const Experience = () => {
   return (
     <>
       <main id='content' className={Container}>
+
+        { /* Navigation back to Home */ }
         <Link className={LinkWrapper} to={{ pathname: '/' }}>
           <span>
             <span className='whitespace-nowrap'>
@@ -28,6 +32,7 @@ const Experience = () => {
           </span>
         </Link>
 
+        { /* Work Experience Section */}
         <section id='work' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>Work Experiences</h2>

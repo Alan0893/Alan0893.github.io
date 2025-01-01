@@ -1,6 +1,9 @@
 import React from 'react';
+
+// For navigation between routes
 import { Link } from 'react-router-dom';
 
+// Styled components for consistent styling across app
 import {
   PageContainer as Container,
   Section,
@@ -11,6 +14,7 @@ import {
   LeftArrowSvg
 } from '../styles/styles';
 
+// Specific project components for each year
 import Projects24 from '../components/projects/2024';
 import Projects23 from '../components/projects/2023';
 import Projects22 from '../components/projects/2022';
@@ -20,6 +24,8 @@ const Projects = () => {
   return (
     <>
       <main id='content' className={Container}>
+
+        { /* Navigation back to Home */ }
         <Link className={LinkWrapper} to={{ pathname: '/' }}>
           <span>
             <span className='whitespace-nowrap'>
@@ -31,6 +37,7 @@ const Projects = () => {
           </span>
         </Link>
 
+        { /* Project sections for 2024 year */ }
         <section id='2024' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>2024</h2>
@@ -38,6 +45,7 @@ const Projects = () => {
           <Projects24 />
         </section>
 
+        { /* Project sections for 2023 year */ }
         <section id='2023' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>2023</h2>
@@ -45,6 +53,7 @@ const Projects = () => {
           <Projects23 />
         </section>
 
+        { /* Project sections for 2022 year */ }
         <section id='2022' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>2022</h2>
@@ -52,6 +61,7 @@ const Projects = () => {
           <Projects22 />
         </section>
 
+        { /* Project sections for 2021 year */ }
         <section id='2021' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>2021</h2>

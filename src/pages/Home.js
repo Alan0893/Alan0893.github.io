@@ -1,4 +1,6 @@
 import React,  { useRef, useEffect, useState } from 'react';
+
+// Styled components for consistent styling across app
 import {
   Home as Container,
   Section,
@@ -9,12 +11,15 @@ import {
   Footer
 } from '../styles/styles';
 
+// Import components
 import Header from '../components/home/Header';
 import About from '../components/sections/About';
 import Skills from '../components/sections/Skills';
 
+// Import global components
 import ScrollIndicator from '../components/global/ScrollIndicator';
 
+// Import game components
 import NumberGuessingGame from '../components/games/NumberGuess';
 import Game2048 from '../components/games/2048';
 import TowerOfHanoi from '../components/games/TowerOfHanoi';
@@ -22,43 +27,52 @@ import SimonSays from '../components/games/SimonSays';
 import ReactionTimer from '../components/games/ReactionTimer';
 
 const Home = () => {
+  // References for scroll percentage calculations
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
 
+  // State to track scroll progress for sections
   const [scrollPercentages, setScrollPercentages] = useState({
     about: 0,
     skills: 0,
   }); 
 
+  // Scroll listener to calculate scroll percentages for each section
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
+      const scrollTop = window.scrollY; // Get current scroll position
 
+      // Calculate scroll percentage for each section
       const aboutScrollPercentage = ((scrollTop - aboutRef.current.offsetTop) / (aboutRef.current.offsetHeight)) * 100;
       const skillsScrollPercentage = ((scrollTop - skillsRef.current.offsetTop) / (skillsRef.current.offsetHeight)) * 100;
 
+      // Update state with new scroll percentages
       setScrollPercentages({
         about: aboutScrollPercentage,
         skills: skillsScrollPercentage,
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Add scroll listener to window
+    window.addEventListener('scroll', handleScroll); 
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const [showGameList, setShowGameList] = useState(false);
-  const [activeGame, setActiveGame] = useState(null); 
-  const [keySequence, setKeySequence] = useState([]); 
+  // State to track game list visibility and active game
+  const [showGameList, setShowGameList] = useState(false);  // Toggle game list visibility
+  const [activeGame, setActiveGame] = useState(null);   // Track active game
+  const [keySequence, setKeySequence] = useState([]);   // Track key sequence for game selection
 
+  // Listen for key presses to trigger game selection
   useEffect(() => {
     const handleKeyPress = (e) => {
-      const key = e.key.toLowerCase();
-      const updatedSequence = keySequence + key;
-  
+      const key = e.key.toLowerCase();  // Convert key to lowercase
+      const updatedSequence = keySequence + key;  // Update key sequence with new key
+      
+      // Valid games to select from
       const validGames = {
         games: "games",
         guess: "guess",
@@ -68,30 +82,29 @@ const Home = () => {
         reaction: "reaction",
       };
 
+      // Check if key sequence matches a valid game
       if (updatedSequence === "games") {
-        setShowGameList(true); 
-        setKeySequence("");
+        setShowGameList(true); // Show game list
+        setKeySequence(""); // Reset key sequence
         return;
       }
   
+      // Find matching game based on key sequence
       const matchingGame = Object.keys(validGames).find(
         (game) => updatedSequence === game
       );
   
       if (matchingGame) {
-        setActiveGame(matchingGame); 
-        setKeySequence("");
-      } else if (
-        !Object.keys(validGames).some((game) =>
-          game.startsWith(updatedSequence)
-        )
-      ) {
-        setKeySequence("");
+        setActiveGame(matchingGame); // Set active game
+        setKeySequence(""); // Reset key sequence
+      } else if (!Object.keys(validGames).some((game) => game.startsWith(updatedSequence))) {
+        setKeySequence(""); // Reset key sequence if no match
       } else {
-        setKeySequence(updatedSequence);
+        setKeySequence(updatedSequence);  // Update key sequence
       }
     };
   
+    // Add key press listener to window
     window.addEventListener("keydown", handleKeyPress);
   
     return () => {
@@ -104,6 +117,7 @@ const Home = () => {
       <Header />
       <main id='content' className={Container}>
 
+        { /* About Section */}
         <section id='about' className={Section} ref={aboutRef}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>About</h2>
@@ -112,6 +126,7 @@ const Home = () => {
           <About/>
         </section>
         
+        { /* Skills Section */}
         <section id='skills' className={Section} ref={skillsRef}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>Skills</h2>
@@ -120,6 +135,7 @@ const Home = () => {
           <Skills />
         </section>
 
+        { /* Footer Section */}
         <section className={Section}>
           <footer className={Footer}>
             <p>

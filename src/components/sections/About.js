@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+// Styled components for consistent styling across app
 import {
   Spacing,
   Container,
@@ -19,13 +21,16 @@ import {
 const About = () => {
   return (
     <div>
+      {/* Description */ }
       <p className={Spacing}>
         I am currently interested in software engineering, data science, and machine learning. 
         During my free time, I spend time learning new technologies and frequently working on 
         new projects or adding onto previous projects.
       </p>
 
+      {/* Education */ }
       <ol>
+        {/* Boston University */}
         <li className={Spacing}>
           <div className={Container}>
             <div className={DivStyles} />
@@ -60,6 +65,7 @@ const About = () => {
           </div>
         </li>
 
+        {/* Relevant Courses */}
         <li id='courses' className={Spacing}>
           <div className={Container}>
             <div className={DivStyles} />
@@ -84,6 +90,7 @@ const About = () => {
           </div>
         </li>
 
+        {/* Forest Hills High School */}
         <li className={Spacing}>
           <div className={Container}>
             <div className={DivStyles} />
@@ -123,7 +130,9 @@ const About = () => {
             </div>
           </div>
         </li>
+
       </ol>
+      
     </div>
   );
 };

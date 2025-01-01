@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+
+// Styled components for consistent styling across app
 import {
   HeaderContainer,
   HeaderH1,
@@ -17,12 +19,16 @@ import {
 } from '../../styles/styles';
 
 const Header = () => {
+  // State to track active navigation item
   const [activeNav, setActiveNav] = useState('');
   const headerRef = useRef(null);
-
+  
+  // Function to set active navigation item based on section in view
   useEffect(() => {
+    // Get all sections on the page
     const sections = Array.from(document.querySelectorAll('section'));
-
+    
+    // Intersection observer to track which section is in view
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,6 +40,7 @@ const Header = () => {
       { rootMargin: '-50% 0% -50% 0%' }
     );
 
+    // Observe each section
     sections.forEach((section) => {
       observer.observe(section);
     });
@@ -56,8 +63,10 @@ const Header = () => {
           Constructing ideas into reality, one line at a time.
         </p>
 
+        { /* Navigation links */ }
         <nav className={Nav}>
           <ul className={NavItems}>
+            {/* About */}
             <li>
               <Link className={`${NavItem} ${activeNav === 'about' ? 'active' : ''}`} to="/">
                 <span className={`${activeNav === 'about' ? ActiveSpan : NavSpan}`} />
@@ -65,6 +74,7 @@ const Header = () => {
               </Link>
             </li>
 
+            {/* Experience */}
             <li>
               <Link className={`${NavItem} ${activeNav === 'experience' ? 'active' : ''}`} to='/work-experience'>
                 <span className={`${activeNav === 'experience' ? ActiveSpan : NavSpan}`} />
@@ -72,6 +82,7 @@ const Header = () => {
               </Link>
             </li>
 
+            {/* Projects */}
             <li>
               <Link className={`${NavItem} ${activeNav === 'projects' ? 'active' : ''}`} to="/projects">
                 <span className={`${activeNav === 'projects' ? ActiveSpan : NavSpan}`} />
@@ -79,6 +90,7 @@ const Header = () => {
               </Link>
             </li>
 
+            {/* Contact */}
             <li>
               <Link className={`${NavItem} ${activeNav === 'contact' ? 'active' : ''}`} to="/contact">
                 <span className={`${activeNav === 'contact' ? ActiveSpan : NavSpan}`} />
@@ -86,6 +98,7 @@ const Header = () => {
               </Link>
             </li>
 
+            {/* Resume */}
             <a className={`${NavItem} ${activeNav === 'resume' ? 'active' : ''}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <span className={`${activeNav === 'resume' ? ActiveSpan : NavSpan}`} />
               <span className={`${activeNav === 'resume' ? ActiveSpanText : NavSpanText}`}> Resume</span>
@@ -93,9 +106,11 @@ const Header = () => {
 
           </ul>
         </nav>
-      </div>
+      </div>  
 
+      { /* Social Media Links */ }
       <ul className={MediaItems}>
+        {/* Github */}
         <li className={Media}>
           <a href='https://github.com/Alan0893' target='_blank' rel='noreferrer'>
             <span className='sr-only'>Github</span>
@@ -110,6 +125,7 @@ const Header = () => {
           </a>
         </li>
 
+        {/* LinkedIn */}
         <li className={Media}>
           <a href='https://www.linkedin.com/in/alanl193/' target='_blank' rel='noreferrer'>
             <span className='sr-only'>LinkedIn</span>
@@ -124,6 +140,7 @@ const Header = () => {
           </a>
         </li>
 
+        {/* Mail */}
         <li className={Media}>
           <a href='mailto:alanl07905@gmail.com' target='_blank' rel='noreferrer'>
             <span className='sr-only'>Mail</span>
@@ -138,6 +155,7 @@ const Header = () => {
           </a>
         </li>
 
+        {/* Kaggle */}
         <li className={Media}>
           <a href='https://www.kaggle.com/alanl193' target='_blank' rel='noreferrer'>
             <span className='sr-only'>Mail</span>
@@ -153,7 +171,9 @@ const Header = () => {
             </svg>
           </a>
         </li>
+        
       </ul>
+
     </header>
   );
 };

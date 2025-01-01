@@ -19,6 +19,7 @@ const Junior = () => {
 		<div>
 			<ul className={ProjContainer}>
 				
+				{/* CS 506 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -57,6 +58,7 @@ const Junior = () => {
 					</div>
 				</li>
 
+				{/* CS 460 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -95,6 +97,7 @@ const Junior = () => {
 					</div>
 				</li>
 
+				{/* CS 350 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />

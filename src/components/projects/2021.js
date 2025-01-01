@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styled components for consistent styling across app
 import {
 	Spacing,
 	Info,
@@ -17,11 +19,12 @@ import {
 } from '../../styles/styles';
 
 const Projects23 = () => {	
-  	return (
+  return (
 		<div>
 			<ul className={ProjContainer}>
 
-			<li className={Spacing}>
+				{/* Project 1 */}
+				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
 						<div className={Time}>
@@ -82,7 +85,7 @@ const Projects23 = () => {
 
 			</ul>
 		</div>
-  	)
+  )
 }
 
 export default Projects23;

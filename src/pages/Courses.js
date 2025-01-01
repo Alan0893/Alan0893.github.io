@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Styled components for consistent styling across app
 import {
   PageContainer as Container,
   Section,
@@ -11,7 +12,8 @@ import {
   LeftArrowSvg
 } from '../styles/styles';
 
-import Freshman from '../components/courses/Freshman';
+// Import course components
+import Freshman from '../components/courses/Freshmen';
 import Sophomore from '../components/courses/Sophomore';
 import Junior from '../components/courses/Junior';
 
@@ -19,6 +21,7 @@ const Courses = () => {
   return (
     <>
       <main id='content' className={Container}>
+        { /* Navigation back to Home */ }
         <Link className={LinkWrapper} to={{ pathname: '/' }}>
           <span>
             <span className='whitespace-nowrap'>
@@ -30,13 +33,15 @@ const Courses = () => {
           </span>
         </Link>
 
+        { /* Course sections for Junior year */ }
         <section id='Junior' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>Junior</h2>
           </div>
           <Junior />
         </section>
-
+    
+        { /* Course sections for Sophomore year */ }
         <section id='Sophomore' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>Sophomore</h2>
@@ -44,9 +49,10 @@ const Courses = () => {
           <Sophomore />
         </section>
 
+        { /* Course sections for Freshmen year */ }
         <section id='Freshman' className={Section}>
           <div className={SectionHeading}>
-            <h2 className={SectionH2}>Freshman</h2>
+            <h2 className={SectionH2}>Freshmen</h2>
           </div>
           <Freshman />
         </section>

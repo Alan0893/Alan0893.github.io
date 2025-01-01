@@ -1,15 +1,17 @@
 import React, { useEffect, useRef } from "react";
 
 const WordSphere = ({ texts, counts, options }) => {
+  // Reference to the canvas element
   const canvasRef = useRef(null);
   const initializedRef = useRef(false); // To track if the canvas has been initialized
 
   useEffect(() => {
     if (initializedRef.current) return; // Prevent reinitialization
     initializedRef.current = true;
-
+    
+    // Canvas setup
     const canvas = canvasRef.current;
-    const π = Math.PI;
+    const π = Math.PI;  // Pi constant
 
     // Adjust canvas dimensions based on screen size
     let canvasWidth, canvasHeight, fontsize, rad;
@@ -45,6 +47,7 @@ const WordSphere = ({ texts, counts, options }) => {
       rad = 140;
     }
 
+    // Options for the sphere
     const {
       width = canvasWidth,
       height = canvasHeight,
@@ -56,7 +59,8 @@ const WordSphere = ({ texts, counts, options }) => {
       initialRotationX = 0,
       initialRotationZ = 0,
     } = options;
-
+    
+    // Initial rotation and velocity
     let vx = initialVelocityX,
       vy = initialVelocityY;
     let rx = initialRotationX,
@@ -77,6 +81,8 @@ const WordSphere = ({ texts, counts, options }) => {
     let clicked = false,
       lastX,
       lastY;
+
+    // Mouse events
     canvas.addEventListener("mousedown", (event) => {
       clicked = true;
       lastX = event.screenX;
@@ -137,6 +143,7 @@ const WordSphere = ({ texts, counts, options }) => {
       ];
     }
 
+    // Render function
     function render() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -187,6 +194,7 @@ const WordSphere = ({ texts, counts, options }) => {
       if (vy < 0) vy = vy + 0.01;
     }
 
+    // Start the animation loop
     function startLoop() {
       looping = true;
       window.requestAnimationFrame(rendererLoop);

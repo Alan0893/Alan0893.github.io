@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styled components for consistent styling across app
 import {
   Spacing,
   Container,
@@ -10,9 +12,12 @@ import {
   ChipText,
   ChipImage
 } from '../../styles/styles';
+
+// Import WordSphere component
 import WordSphere from '../home/WordSphere';
 
 const Skills = () => {
+  // Array of skills to display in WordSphere
   const texts = [
     'Java', 'HTML', 'CSS', 'Python', 'JavaScript', 'ReactJS', 'Git', 'Firebase', 'Jupyter Notebook',
     'Bash/Shell', 'x86 Assembly', 'LaTeX', 'Tailwind CSS', 'Bootstrap', 'ViteJS', 'NodeJS', 'OCaml', 
@@ -20,6 +25,7 @@ const Skills = () => {
   ];
   const counts = [1, 2, 4, 5, 4, 2, 1];
 
+  // Options for WordSphere component
   const options = {
     tilt: Math.PI / 9,
     initialVelocityX: 3.5,
@@ -32,12 +38,11 @@ const Skills = () => {
 	  <div>
       <ol>
 
+        {/* Comfortable Skills */}
         <li className={Spacing}>
           <div className={Container}>
             <div className={DivStyles} />
-            <header className={Subhead}>
-              Comfortable
-            </header>
+            <header className={Subhead}> Comfortable </header>
             <div className={Info}>
               <ul className={ChipWrapper}>
                 <li className='mr-1.5 mt-1'> 
@@ -99,12 +104,11 @@ const Skills = () => {
           </div>
         </li>
 
+        {/* Familiar Skills */}
         <li className={Spacing}>
           <div className={Container}>
             <div className={DivStyles} />
-            <header className={Subhead}>
-              Familiar
-            </header>
+            <header className={Subhead}> Familiar </header>
             <div className={Info}>
               <ul className={ChipWrapper}>
                 <li className='mr-1.5 mt-1'>
@@ -190,12 +194,11 @@ const Skills = () => {
           </div>
         </li>
 
+        {/* Currently Learning */}
         <li className={Spacing}>
           <div className={Container}>
             <div className={DivStyles} />
-            <header className={Subhead}>
-              Currently Learning
-            </header>
+            <header className={Subhead}> Currently Learning </header>
             <div className={Info}>
               <ul className={ChipWrapper}>
                 
@@ -218,9 +221,12 @@ const Skills = () => {
         </li>
 
       </ol>
+
+      {/* WordSphere component */}
       <div className="flex justify-center items-center">
         <WordSphere texts={texts} counts={counts} options={options} />
       </div>
+      
     </div>
   )
 }

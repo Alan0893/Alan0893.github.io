@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styled components for consistent styling across app
 import {
 	ScrollWrapper,
 	Scroll

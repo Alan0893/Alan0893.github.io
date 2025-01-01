@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
+
+// Styled components for consistent styling across app
 import {
   Section,
   SectionHeading,
@@ -12,13 +14,18 @@ import {
   FormButton
 } from '../styles/styles';
 
+// Import components
 import Header from '../components/home/Header';
+
+// Import global components
 import ScrollIndicator from '../components/global/ScrollIndicator';
 
 const Contact = () => {
+  // Reference for scroll percentage calculations
   const contactRef = useRef(null);
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
+  // Scroll listener to calculate scroll percentage for contact section
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -39,9 +46,9 @@ const Contact = () => {
     return emailRegex.test(email);
   };
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const form = e.target;
     const email = form.email.value;
 
@@ -63,6 +70,7 @@ const Contact = () => {
             <ScrollIndicator scrollPercentages={scrollPercentage.toFixed(2)} />
           </div>
 
+          {/* Contact form */}
           <div className={FormWrapper}>
             <form
               action="https://formspree.io/f/xrbzvzdb" 
@@ -113,6 +121,7 @@ const Contact = () => {
           </div>
         </section>
 
+        {/* Footer Section */}
         <section className={Section}>
           <footer className={Footer}>
             <p>
@@ -133,6 +142,7 @@ const Contact = () => {
             </p>
           </footer>
         </section>
+        
       </main>
     </>
   );

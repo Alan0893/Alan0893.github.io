@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Styled components for consistent styling across app
 import {
   PageContainer as Container,
   Section,
@@ -17,6 +18,7 @@ import {
   Iframe
 } from '../styles/styles';
 
+// Assignment data
 const assignments = [
   {
     title: 'Extra Credit: Identifying Credit Card Fraud',
@@ -80,6 +82,7 @@ const Assignments = () => {
     <>
       <main id='content' className={Container}>
 
+        { /* Navigation back to Home */ }
         <Link className={LinkWrapper} to={{ pathname: '/' }}>
           <span>
             <span className='whitespace-nowrap'>
@@ -91,11 +94,13 @@ const Assignments = () => {
           </span>
         </Link>
 
+        { /* Assignments Section */}
         <section id='assignments' className={Section}>
           <div className={SectionHeading}>
             <h2 className={SectionH2}>Assignments</h2>
           </div>
 
+          { /* Assignment Cards */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {assignments.map((assignment, index) => (
               <div key={index} className={AssignmentCard}>

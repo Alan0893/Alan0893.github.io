@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+
+// Import components
 import Gradient from "./Gradient";
+
+// Styled components for consistent styling across app
 import {
   BackgroundContainer,
   Mouse,
@@ -9,20 +13,27 @@ import {
   BackgroundChild,
 } from "../../styles/styles";
 
+// Import SVG icons
 import SnowflakeSVG from "../svg/Snowflake";
 import BalloonSVG from "../svg/Balloon";
 
+// Special days with floating icons
 const specialDays = {
   christmas: { month: 11, day: 25, icon: <SnowflakeSVG /> }, // December 25
   bday: { month: 5, day: 22, icon: <BalloonSVG  />, direction: "up" }, // June 22
 };
 
 const Background = ({ children }) => {
+  // State to track mouse effect
   const [mouseStyle, setMouseStyle] = useState(null);
   const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = useState(false);
+  // State to track floating icons
   const [floatingIcons, setFloatingIcons] = useState([]);
+
+  // Get current location
   const location = useLocation();
 
+  // Enable mouse tracking on larger screens
   useEffect(() => {
     const handleResize = () => {
       setIsMouseTrackingEnabled(window.innerWidth >= 1024);
@@ -37,6 +48,7 @@ const Background = ({ children }) => {
     };
   }, []);
 
+  // Function to handle mouse movement
   const handleMouseMove = (event) => {
     if (isMouseTrackingEnabled) {
       const { clientX, clientY } = event;
@@ -52,8 +64,10 @@ const Background = ({ children }) => {
     }
   };
 
+  // Set child component based on location
   const [childStyle, setChildState] = useState(ChildWrapper);
 
+  // Change child component based on location
   useEffect(() => {
     if (
       location.pathname === "/" ||
@@ -67,6 +81,7 @@ const Background = ({ children }) => {
     else setChildState(ChildWrapper2);
   }, [location]);
 
+  // Check for special days
   useEffect(() => {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-indexed (0 = January, 11 = December)
@@ -139,7 +154,8 @@ const Background = ({ children }) => {
             <div className={BackgroundChild}>{children}</div>
           </div>
         </div>
-
+          
+        {/* Global styles for floating icons */}
         <style>
           {`
             @keyframes float-down {

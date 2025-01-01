@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styled components for consistent styling across app
 import {
 	Spacing,
 	Info,
@@ -19,6 +21,7 @@ const Experience = () => {
 		<div>
 			<ul className={SingleBlockContainer}> 
 
+				{/* Experience 3 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -61,6 +64,7 @@ const Experience = () => {
 					</div>
 				</li>
 
+				{/* Experience 2 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -102,6 +106,7 @@ const Experience = () => {
 					</div>
 				</li>
 
+				{/* Experience 1 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />

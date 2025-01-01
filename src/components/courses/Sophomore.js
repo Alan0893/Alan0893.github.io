@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styled components for consistent styling across app
 import {
 	Spacing,
 	Info,
@@ -15,10 +17,11 @@ import {
 } from '../../styles/styles';
 
 const Sophomore = () => {	
-  	return (
+  return (
 		<div>
 			<ul className={ProjContainer}>
 
+				{/* CS 411 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -57,6 +60,7 @@ const Sophomore = () => {
 					</div>
 				</li>
 
+				{/* CS 391 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -104,6 +108,7 @@ const Sophomore = () => {
 					</div>
 				</li>
 
+				{/* CS 330 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -139,6 +144,7 @@ const Sophomore = () => {
 					</div>
 				</li>
 
+				{/* CS 320 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
@@ -180,6 +186,7 @@ const Sophomore = () => {
 					</div>
 				</li>
 
+				{/* CS 237 */}
 				<li className={Spacing}>
 					<div className={ProjWrapper}>
 						<div className={ProjDiv} />
