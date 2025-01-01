@@ -15,6 +15,12 @@ import Skills from '../components/sections/Skills';
 
 import ScrollIndicator from '../components/global/ScrollIndicator';
 
+import NumberGuessingGame from '../components/games/NumberGuess';
+import Game2048 from '../components/games/2048';
+import TowerOfHanoi from '../components/games/TowerOfHanoi';
+import SimonSays from '../components/games/SimonSays';
+import ReactionTimer from '../components/games/ReactionTimer';
+
 const Home = () => {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -43,6 +49,55 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const [showGameList, setShowGameList] = useState(false);
+  const [activeGame, setActiveGame] = useState(null); 
+  const [keySequence, setKeySequence] = useState([]); 
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      const key = e.key.toLowerCase();
+      const updatedSequence = keySequence + key;
+  
+      const validGames = {
+        games: "games",
+        guess: "guess",
+        "2048": "2048",
+        hanoi: "hanoi", 
+        simon: "simon",
+        reaction: "reaction",
+      };
+
+      if (updatedSequence === "games") {
+        setShowGameList(true); 
+        setKeySequence("");
+        return;
+      }
+  
+      const matchingGame = Object.keys(validGames).find(
+        (game) => updatedSequence === game
+      );
+  
+      if (matchingGame) {
+        setActiveGame(matchingGame); 
+        setKeySequence("");
+      } else if (
+        !Object.keys(validGames).some((game) =>
+          game.startsWith(updatedSequence)
+        )
+      ) {
+        setKeySequence("");
+      } else {
+        setKeySequence(updatedSequence);
+      }
+    };
+  
+    window.addEventListener("keydown", handleKeyPress);
+  
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [keySequence]);
 
   return (
     <>
@@ -90,6 +145,60 @@ const Home = () => {
           </footer>
         </section>
       </main>
+
+      {/* Render the game list if "games" is typed */}
+      {showGameList && (
+        <div className="fixed inset-0 flex items-center justify-center bg-slate-900/80 z-50">
+          <div className="bg-slate-800 text-slate-200 p-8 rounded-lg shadow-lg border border-blue-300 max-w-md w-full text-center">
+            <h2 className="text-2xl font-bold mb-4">MiniGames 👾</h2>
+            <div className="flex flex-col gap-4">
+              <button
+                onClick={() => setActiveGame("guess")}
+                className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-lg"
+              >
+                Number Guessing Game
+              </button>
+              <button
+                onClick={() => setActiveGame("2048")}
+                className="bg-green-500 hover:bg-green-400 px-4 py-2 rounded-lg"
+              >
+                2048
+              </button>
+              <button
+                onClick={() => setActiveGame("hanoi")}
+                className="bg-yellow-500 hover:bg-yellow-400 px-4 py-2 rounded-lg"
+              >
+                Tower of Hanoi
+              </button>
+              <button
+                onClick={() => setActiveGame("simon")}
+                className="bg-red-500 hover:bg-red-400 px-4 py-2 rounded-lg"
+              >
+                Simon Says
+              </button>
+              <button
+                onClick={() => setActiveGame("reaction")}
+                className="bg-purple-500 hover:bg-purple-400 px-4 py-2 rounded-lg"
+              >
+                Reaction Timer
+              </button>
+            </div>
+            <button
+              onClick={() => setShowGameList(false)}
+              className="mt-8 bg-gray-500 hover:bg-gray-400 px-4 py-2 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Render active game based on state */}
+      { activeGame === "guess" && ( <NumberGuessingGame onClose={() => setActiveGame(null)} /> )}
+      { activeGame === "2048" && <Game2048 onClose={() => setActiveGame(null)} />}
+      { activeGame === "hanoi" && ( <TowerOfHanoi onClose={() => setActiveGame(null)} /> )}
+      { activeGame === "simon" && ( <SimonSays onClose={() => setActiveGame(null)} /> )}
+      { activeGame === "reaction" && ( <ReactionTimer onClose={() => setActiveGame(null)} /> )}
     </>
   )
 }
