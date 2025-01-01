@@ -10,9 +10,11 @@ import {
 } from "../../styles/styles";
 
 import SnowflakeSVG from "../svg/Snowflake";
+import BalloonSVG from "../svg/Balloon";
 
 const specialDays = {
   christmas: { month: 11, day: 25, icon: <SnowflakeSVG /> }, // December 25
+  bday: { month: 5, day: 22, icon: <BalloonSVG  />, direction: "up" }, // June 22
 };
 
 const Background = ({ children }) => {
@@ -65,7 +67,6 @@ const Background = ({ children }) => {
     else setChildState(ChildWrapper2);
   }, [location]);
 
-  // Determine the special day and set floating icons
   useEffect(() => {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-indexed (0 = January, 11 = December)
@@ -79,15 +80,15 @@ const Background = ({ children }) => {
       // Generate an array of floating icons
       setFloatingIcons(
         Array.from({ length: 10 }, () => ({
-          id: Math.random(), // Unique ID for each icon
+          id: Math.random(),
           icon: specialDay.icon,
-          left: Math.random() * 100, // Random horizontal position (0-100%)
-          animationDuration: Math.random() * 5 + 5, // Random animation duration (5-10s)
-          direction: specialDay.direction || "down", // Direction of animation
+          left: Math.random() * 100, 
+          animationDuration: Math.random() * 5 + 5, 
+          direction: specialDay.direction || "down", 
         }))
       );
     } else {
-      setFloatingIcons([]); // No floating icons if it's not a special day
+      setFloatingIcons([]); 
     }
   }, []);
 
@@ -111,7 +112,7 @@ const Background = ({ children }) => {
               width: "100%",
               height: "100%",
               overflow: "hidden",
-              pointerEvents: "none", // Prevent interaction with icons
+              pointerEvents: "none", 
             }}
           >
             {floatingIcons.map((icon) => (
@@ -121,11 +122,11 @@ const Background = ({ children }) => {
                   position: "absolute",
                   fontSize: "2rem",
                   left: `${icon.left}%`,
-                  top: icon.direction === "up" ? `110%` : `-10%`, // Use "top" for both directions
+                  top: icon.direction === "up" ? `110%` : `-10%`,
                   animation: `${
                     icon.direction === "up" ? "float-up" : "float-down"
                   } ${icon.animationDuration}s linear infinite`,
-                  transform: "translateY(0)", // Initial position
+                  transform: "translateY(0)", 
                   opacity: 1,
                 }}
               >
@@ -134,13 +135,11 @@ const Background = ({ children }) => {
             ))}
           </div>
 
-          {/* Content */}
           <div className={childStyle}>
             <div className={BackgroundChild}>{children}</div>
           </div>
         </div>
 
-        {/* Inline styles for floating animations */}
         <style>
           {`
             @keyframes float-down {
@@ -149,8 +148,8 @@ const Background = ({ children }) => {
                 opacity: 1;
               }
               100% {
-                transform: translateY(110vh); /* Float down past the bottom of the screen */
-                opacity: 0; /* Fade out as it floats down */
+                transform: translateY(110vh); 
+                opacity: 0; 
               }
             }
 
@@ -160,8 +159,8 @@ const Background = ({ children }) => {
                 opacity: 1;
               }
               100% {
-                transform: translateY(-110vh); /* Float up past the top of the screen */
-                opacity: 0; /* Fade out as it floats up */
+                transform: translateY(-110vh); 
+                opacity: 0; 
               }
             }
           `}
